@@ -1,0 +1,134 @@
+/* Root color variables */
+:root {
+  --primary-color: #DF6951;
+  --secondary-color: #333;
+  --light-color: #fff;
+  --accent-color: orange;
+  --bg-color: #f9f9f9;
+  --text-color: #555;
+  --font-heading: 'Volkhov', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--secondary-color);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--light-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* Buttons */
+.btn {
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-color);
+}
+
+.play-button {
+  background: var(--primary-color);
+  border-radius: 50%;
+  color: var(--light-color);
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+.back-to-top a {
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.75rem;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--light-color);
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
